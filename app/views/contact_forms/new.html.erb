@@ -1,0 +1,12 @@
+<h1>Contact Form</h1>
+
+<%= form_for @contact_form do |f| %>
+
+	<div class="form-group">
+	<%= f.input :name, class: "control-label" %><br />
+	<%= f.input :email, class: "control-label" %><br />
+	<%= f.input :message, :as => :text, class: "control-label" %><br />
+
+  <p><%= f.submit "Submit" %></p>
+ <% end %>
+

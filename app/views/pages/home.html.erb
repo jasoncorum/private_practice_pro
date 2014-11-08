@@ -10,9 +10,15 @@
 
         <button id="patient">Patient</button>
           <div id="dialog" title="Find a Therapist">Enter your zipcode:<br>
-          <input id="zip">
-          <input type="submit" value="Submit">
+          
+            <%= form_tag(profiles_path, method: 'get') do %>
+                <%= text_field :q, params[:q] %>
+            <%= submit_tag('Search') %>
+            <% end %>
           </div>
+
+
+
       </div>
     </div>
   </div>

@@ -1,5 +1,9 @@
 Rails.application.routes.draw do
   
+  get 'contact_form/new'
+
+  get 'contact_form/create'
+
   #devise_for :therapists
 
   devise_for :therapists, controllers: { sessions: 'therapists/sessions', registrations: 'therapists/registrations' }
@@ -20,6 +24,7 @@ Rails.application.routes.draw do
   #   resources :products
 
   resources :profiles
+  resources :contact_forms
 
   # Example resource route with options:
   #   resources :products do

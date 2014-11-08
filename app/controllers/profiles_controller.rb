@@ -7,7 +7,12 @@ class ProfilesController < ApplicationController
 
 
   def index
-    @profiles = Profile.all
+    # @profiles = Profile.all
+    if params[:q]
+      @profiles = Profile.search_profile(params[:q])
+    else
+      @profiles = Profile.all
+    end 
   end
 
   def show
@@ -23,6 +28,7 @@ class ProfilesController < ApplicationController
   def create
     @profile = current_therapist.build_profile(profile_params)
     if @profile.save
+      current_therapist.profile = @profile
       redirect_to @profile, notice: 'Profile was successfully created.'
     else
       render action: 'new'
@@ -50,7 +56,7 @@ class ProfilesController < ApplicationController
 
     def correct_therapist
       @profile = current_therapist.profile #.find_by(id: params[:id])
-      redirect_to profiles_path, notice: "Not authorized to edit this pin" if @profile.nil?
+      redirect_to profiles_path, notice: "Not authorized to edit this profile." if @profile.nil?
     end
 
     def profile_params
