@@ -60,7 +60,7 @@ class ProfilesController < ApplicationController
     end
 
     def profile_params
-      params.require(:profile).permit(:first_name, :last_name, :address_one, :address_two, :city, :state, :zip, :phone, :degree, :university, :therapeutic_style, :years_of_practice, :accepting_new_patients, :image)
+      params.require(:profile).permit(:first_name, :last_name, :address_one, :address_two, :city, :state, :zip, :email, :phone, :degree, :university, :therapeutic_style, :years_of_practice, :accepting_new_patients, :image)
     end
 
     def set_options_for_state

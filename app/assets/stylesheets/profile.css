@@ -1,0 +1,82 @@
+body {
+  font: 20px 'Roboto Condensed';
+}
+
+#contactinfo {
+  width: 100%;
+  margin: 0 auto;
+  padding: 2%;
+}
+
+img {
+  display: inline-block;
+  float: left;
+  margin-right: 2%
+}
+
+h1 {
+  font-size: 1.2em;
+}
+
+h2 {
+  font-size: 1em;
+  margin-bottom: 0;
+}
+
+p, span, li {
+  margin: 5px 0;
+  font-weight: 300;
+}
+
+.newpt {
+  margin: 15px 0;
+  color: #00C342;
+}
+
+.nopatient {
+  color: red;
+}
+
+.first_name, .last_name, #degree {
+  display: inline;
+}
+
+#addrblock {
+  display: inline-block;
+  float: left;
+}
+
+#contactbutton {
+  display: inline-block;
+  float: left;
+  margin: 20px 35px;
+}
+
+#contact {
+  border-radius: 8px;
+  border: transparent;
+  padding: 15px;
+  background: #FFD966;
+  font: 18px 'Roboto Condensed';
+}
+
+.clearfix {
+  clear: both;
+}
+
+.heading {
+  background-color: #FF943A;
+  color: white;
+  font-weight: 400;
+  padding: 1% 2%;
+}
+
+#qualtxt {
+  width: 100%;
+  padding: 1% 2%;
+  margin-bottom: 25px;
+}
+
+#financetxt {
+  padding: 1% 2%;
+}

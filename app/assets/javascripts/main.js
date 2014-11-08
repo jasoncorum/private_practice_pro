@@ -1,4 +1,4 @@
-$( "#login").dialog({ autoOpen: false, width: 350, height: 300 });
+$( "#login").dialog({ autoOpen: false, width: 350, height: 350 });
    $( "#therapist" ).click(function() {
      $( "#login").dialog( "open" );
    });

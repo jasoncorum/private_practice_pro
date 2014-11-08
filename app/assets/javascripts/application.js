@@ -15,4 +15,5 @@
 //= require jquery.turbolinks
 //= require jquery_ujs
 //= require main
+//= require profile
 //= require_tree .

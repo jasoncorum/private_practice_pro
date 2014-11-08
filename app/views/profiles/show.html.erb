@@ -1,21 +1,56 @@
 <% provide(:title, 'Profile') %>
 
-<div class="row">
-	<div class="col-md-offset-2 col-md-8">
-		<div class="panel panel-default">
-		<div class="panel-heading center">
-			<%= image_tag @profile.image.url(:medium) %>
-		</div>
-		<div class="panel-body">
-		<p><%= @profile.first_name %>&nbsp;<%= @profile.last_name %></p>
+<div id="contactinfo">
+	<%= image_tag @profile.image.url(:medium), :id => "pic" %>
+	<div id="basicinfo">
+		<h1 class="first_name"><%= "#{@profile.first_name} #{@profile.last_name}, #{@profile.degree}"  %></h1>
+		
+		<h2>Therapeutic Style:</h2>
+		<p id="tstyle"><%= "#{@profile.therapeutic_style}" %></p>
 
-		<% if @profile.therapist == current_therapist %>
-			<%= link_to edit_profile_path(@profile) do %>
-        <span class="glyphicon glyphicon-edit"></span>
-        Edit
+		<p class="newpt nopatient">Not accepting new patients</p>
+
+		 <div id="addrblock">
+      <p id="address_one"><%= "#{@profile.address_one}" %></p>
+      <% if @profile.address_two != nil %>
+      	<p id="address_two"><%= "#{@profile.address_two}" %></p>
       <% end %>
-		<% end %>
-		</div>
-	</div>
+      <span id="city"><%= "#{@profile.city}, #{@profile.state} #{@profile.zip}" %></span>
+    </div>
 
-</div>
+    <div id="contactbutton">
+        <button id="contact">Contact Info</button>
+        <div id="contact-text" title="Contact Information">
+          <p><strong>Phone Number: </strong><br>
+          	<%= link_to "#{@profile.phone}", "tel:#{@profile.phone}", :id => "phone" %>
+          </p>
+          <br>
+          <p><strong>Email: </strong><br>
+          	<%= mail_to "#{@profile.email}", "#{@profile.email}", :id => "email" %>
+          </p>
+        </div>
+      </div>
+      <div class="clearfix"></div>
+    </div>
+	</div>
+	<div id="qualifications">
+    <div class="heading">Qualifications</div>
+    <div id="qualtxt">
+      <strong>Years in Practice: </strong><span id="years"><%= "#{@profile.years_of_practice}"  %></span><br>
+      <strong>School: </strong><span id="university"><%= "#{@profile.university}" %></span><br>
+      <strong>Degree: </strong><span id="degree"><%= "#{@profile.degree}" %></span>
+    </div>
+    <div id="finances">
+      <div class="heading">Finances</div>
+        <div id="financetxt">
+        <strong>Accepted Insurance Plans:</strong>
+        <ul class="insurance">
+          <li class="nav">Aetna</li>
+          <li class="nav">Blue Cross</li>
+          <li class="nav">Cigna</li>
+          <li class="nav">Kaiser</li>
+          <li class="nav">Medicare</li>
+        </ul>
+        </div>
+    </div>
+  </div>

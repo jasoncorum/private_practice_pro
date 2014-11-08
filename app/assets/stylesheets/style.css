@@ -1,3 +1,4 @@
+
 body {
   font: 18px 'Roboto Condensed';
 }
@@ -14,20 +15,29 @@ input, select {
 
 header {
   width: 100%;
-  height: 100px;
+  height: 80px;
 }
 
 #name {
+  display: inline-block;
   font-size: 2em;
   padding: 0 4%;
+  margin-bottom: 0px;
+  vertical-align: bottom;
 }
 
 #hero {
   width: 100%;
   height: 100%;
   background-color: black;
-  background-image: url('dandelions.jpeg') no-repeat center center;
+  background-image: url('dandelions.jpeg');
   background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size:cover;
+  -o-background-size: cover;
+  -moz-background-size: cover;
+  -webkit-background-size:cover;
 }
 
 #veil {
@@ -59,7 +69,7 @@ footer {
   height: 100px;
 }
 
-li {
+.nav {
   display: inline-block;
   list-style-type: none;
   margin-right: 15px;
@@ -77,4 +87,22 @@ a {
 a:hover {
   color: red;
   text-decoration: underline;
+}
+
+.ui-widget input[type='submit'] {
+  background-color: RGBA(203, 132, 46, .9);
+  border-radius: 8px;
+  padding: 8px 12px;
+  border: transparent;
+  font-size: 1em;
+}
+
+/*===========================================
+CSS for Therapist Form
+===========================================*/
+
+#wrapper {
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 5%;
 }
