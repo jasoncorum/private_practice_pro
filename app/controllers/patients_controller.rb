@@ -1,4 +1,4 @@
-class PagesController < ActionController::Base
+class PatientsController < ActionController::Base
 
 	def find
 	end

@@ -1,6 +1,6 @@
-class PagesController < ActionController::Base
+class PagesController < ApplicationController
 
-	def index
+	def home
 	end
 
 end

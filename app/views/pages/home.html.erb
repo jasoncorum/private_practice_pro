@@ -1,10 +1,11 @@
+<% provide(:title, 'Home') %>
+
 <div class="jumbotron">
 	<% if therapist_signed_in? %>
 		<h1>You're logged in!</h1>
-		<%= link_to "Log out", destroy_therapist_session_path, method: :delete %>
+
 	<% else %>
 		<h1>Welcome to Private Practice Pro!</h1>
 		<p>Wassup!</p>
-		<%= link_to "Sign in", new_therapist_session_path, class: "btn btn-primary btn-lg" %>
 	<% end %>
 </div>
