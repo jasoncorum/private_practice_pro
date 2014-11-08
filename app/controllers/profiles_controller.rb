@@ -3,6 +3,8 @@ class ProfilesController < ApplicationController
   before_action :set_profile, only: [:show, :edit, :update, :destroy]
   before_action :correct_therapist, only: [:edit, :update, :destroy]
   before_action :authenticate_therapist!, except: [:index, :show]
+  before_action :set_options_for_state, only: [:new, :edit]
+
 
   def index
     @profiles = Profile.all
@@ -53,5 +55,9 @@ class ProfilesController < ApplicationController
 
     def profile_params
       params.require(:profile).permit(:first_name, :last_name, :address_one, :address_two, :city, :state, :zip, :phone, :degree, :university, :therapeutic_style, :years_of_practice, :accepting_new_patients, :image)
+    end
+
+    def set_options_for_state
+      @options_for_state = ["DC", "MD", "VA"]
     end
 end

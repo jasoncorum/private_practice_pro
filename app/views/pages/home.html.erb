@@ -1,11 +1,33 @@
 <% provide(:title, 'Home') %>
+<div id="hero">
+    <div id="veil">
+      <div id="welcome">
+        <p>I am a...</p>
+        <button id="therapist">
+	    			<%= link_to "Therapist", new_therapist_registration_path %>
+	  			</button>
 
-<div class="jumbotron">
-	<% if therapist_signed_in? %>
-		<h1>You're logged in!</h1>
 
-	<% else %>
-		<h1>Welcome to Private Practice Pro!</h1>
-		<p>Wassup!</p>
-	<% end %>
-</div>
+        <button id="patient">Patient</button>
+          <div id="dialog" title="Find a Therapist">Enter your zipcode:<br>
+          <input id="zip">
+          <input type="submit" value="Submit">
+          </div>
+      </div>
+    </div>
+  </div>
+  <footer>
+    <ul id="nav">
+      <li><a href="#">About</a></li>
+      <li><a href="#">FAQ</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+  </footer>
+  <script type="text/javascript" src="js/jquery.js"></script>
+  <script type="text/javascript" src="js/jquery-ui.min.js"></script>
+  <script type="text/javascript">
+    $( "#dialog" ).dialog({ autoOpen: false });
+    $( "#patient" ).click(function() {
+      $( "#dialog" ).dialog( "open" );
+    });
+  </script>

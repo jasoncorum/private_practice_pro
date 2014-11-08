@@ -1,17 +1,62 @@
 <p>
 <%= form_for @profile, html: { multipart: true } do |f| %>
-	<div class="form-group">
-		<%= f.label :first_name, "First Name:", class: "control-label" %><br />
-		<%= f.text_field :first_name, autofocus: true, class: "form-control" %></div>
-	
-	<div class="form-group">
-		<%= f.label :last_name, "Last Name:", class: "control-label" %><br />
-		<%= f.text_field :last_name, class: "form-control" %></div>
+
+	<h3>Contact Information</h3>
 
 	<div class="form-group">
-    <%= f.label :image %>
+	<%= f.label :first_name, "First Name:", class: "control-label" %><br />
+	<%= f.text_field :first_name, autofocus: true, class: "form-control" %></div>
+	
+	<div class="form-group">
+	<%= f.label :last_name, "Last Name:", class: "control-label" %><br />
+	<%= f.text_field :last_name, class: "form-control" %></div>
+
+	<div class="form-group">
+	<%= f.label :address_one, "Address One:", class: "control-label" %><br />
+	<%= f.text_field :address_one, class: "form-control" %></div>
+
+	<div class="form-group">
+	<%= f.label :address_two, "Address Two:", class: "control-label" %><br />
+	<%= f.text_field :address_one, class: "form-control" %></div>
+
+	<div class="form-group">
+	<%= f.label :city, "Address One:", class: "control-label" %><br />
+	<%= f.text_field :city, class: "form-control" %></div>
+
+	<div class="form-group">
+	<%= f.label :state, "State:", class: "control-label" %><br />
+	<%= f.select :state, @options_for_state, autofocus: true, class: "form-control" %></div>
+
+	<div class="form-group">
+	<%= f.label :zip, "Zipcode:", class: "control-label" %><br />
+	<%= f.text_field :zip, class: "form-control" %></div>
+
+	<div class="form-group">
+	<%= f.label :phone, "Phone Number:", class: "control-label" %><br />
+	<%= f.text_field :phone, class: "form-control" %></div>
+
+	<h3>About You</h3>
+
+	<div class="form-group">
+    <%= f.label :image, "Upload a profile photo:" %>
     <%= f.file_field :image, class: "form-control" %>
   </div>
+
+  <div class="form-group">
+	<%= f.label :degree, "Degree:", class: "control-label" %><br />
+	<%= f.text_field :degree, class: "form-control" %></div>
+
+	<div class="form-group">
+	<%= f.label :university, "University:", class: "control-label" %><br />
+	<%= f.text_field :university, class: "form-control" %></div>
+
+	<div class="form-group">
+	<%= f.label :therapeutic_style, "Therapeutic Style:", class: "control-label" %><br />
+	<%= f.text_field :therapeutic_style, class: "form-control" %></div>
+
+	<div class="form-group">
+	<%= f.label :years_of_practice, "Years of Practice:", class: "control-label" %><br />
+	<%= f.text_field :years_of_practice, class: "form-control" %></div>
 
   <p><%= f.submit "Save", class: "btn btn-primary btn-lg" %></p>
 <% end %>
