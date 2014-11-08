@@ -1,0 +1,23 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  appt_one_date: 2014-11-08
+  appt_one_time_one: 2014-11-08 15:55:12
+  appt_one_time_two: 2014-11-08 15:55:12
+  appt_two_date: 2014-11-08
+  appt_two_time_one: 2014-11-08 15:55:12
+  appt_two_time_two: 2014-11-08 15:55:12
+  appt_three_date: 2014-11-08
+  appt_three_time_one: 2014-11-08 15:55:12
+  appt_three_time_two: 2014-11-08 15:55:12
+
+two:
+  appt_one_date: 2014-11-08
+  appt_one_time_one: 2014-11-08 15:55:12
+  appt_one_time_two: 2014-11-08 15:55:12
+  appt_two_date: 2014-11-08
+  appt_two_time_one: 2014-11-08 15:55:12
+  appt_two_time_two: 2014-11-08 15:55:12
+  appt_three_date: 2014-11-08
+  appt_three_time_one: 2014-11-08 15:55:12
+  appt_three_time_two: 2014-11-08 15:55:12

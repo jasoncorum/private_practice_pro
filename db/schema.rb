@@ -11,7 +11,22 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141108200259) do
+ActiveRecord::Schema.define(version: 20141108205905) do
+
+  create_table "appointments", force: true do |t|
+    t.date     "appt_one_date"
+    t.time     "appt_one_time_one"
+    t.time     "appt_one_time_two"
+    t.date     "appt_two_date"
+    t.time     "appt_two_time_one"
+    t.time     "appt_two_time_two"
+    t.date     "appt_three_date"
+    t.time     "appt_three_time_one"
+    t.time     "appt_three_time_two"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.integer  "therapist_id"
+  end
 
   create_table "profiles", force: true do |t|
     t.string   "first_name"

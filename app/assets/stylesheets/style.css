@@ -96,7 +96,6 @@ a:hover {
   border: transparent;
   font-size: 1em;
 }
-
 /*===========================================
 CSS for Therapist Form
 ===========================================*/
@@ -105,4 +104,44 @@ CSS for Therapist Form
   width: 100%;
   margin: 0 auto;
   padding: 0 5%;
+}
+
+.heading {
+  background-color: RGBA(255, 148, 58, 1);
+  color: white;
+  padding: 0 10px;
+}
+
+/*===========================================
+CSS for Search Results Page
+===========================================*/
+.entry {
+  width: 100%;
+  padding: 10px;
+  text-align: left;
+}
+
+.pic {
+  display: inline-block;
+}
+
+.info {
+  display: inline-block;
+  vertical-align: top;
+}
+
+.line1, .line2 {
+  display: inline;
+}
+
+.line1 {
+  font-size: 1.5em;
+}
+
+.line2 {
+  font-size: 1em;
+}
+
+.shading {
+  background-color: RGBA(255, 148, 58, .7);
 }

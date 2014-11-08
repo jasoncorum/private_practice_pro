@@ -24,7 +24,7 @@ Rails.application.routes.draw do
   #   resources :products
 
   resources :profiles
-  resources :contact_forms
+  resources :appointments
 
   # Example resource route with options:
   #   resources :products do

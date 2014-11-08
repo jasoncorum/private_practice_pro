@@ -1,5 +1,7 @@
 <% provide(:title, 'Create Profile') %>
 
+<div id="wrapper">
+
 <% if @profile.errors.any? %>
 	<% @profile.errors.full_messages.each do |msg| %>
 	<li><%= msg %></li>
@@ -11,3 +13,4 @@
 
 <%= render partial: 'form' %>
 
+</div>
