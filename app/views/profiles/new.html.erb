@@ -1,0 +1,13 @@
+<% provide(:title, 'Create Profile') %>
+
+<% if @profile.errors.any? %>
+	<% @profile.errors.full_messages.each do |msg| %>
+	<li><%= msg %></li>
+	<% end %>
+<% end %>
+
+<h2>Create Profile</h2>
+<p>Create your profile below.</p>
+
+<%= render partial: 'form' %>
+

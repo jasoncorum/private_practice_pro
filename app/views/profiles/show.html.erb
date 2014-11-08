@@ -1,0 +1,21 @@
+<% provide(:title, 'Profile') %>
+
+<div class="row">
+	<div class="col-md-offset-2 col-md-8">
+		<div class="panel panel-default">
+		<div class="panel-heading center">
+			<%= image_tag @profile.image.url(:medium) %>
+		</div>
+		<div class="panel-body">
+		<p><%= @profile.first_name %>&nbsp;<%= @profile.last_name %></p>
+
+		<% if @profile.therapist == current_therapist %>
+			<%= link_to edit_profile_path(@profile) do %>
+        <span class="glyphicon glyphicon-edit"></span>
+        Edit
+      <% end %>
+		<% end %>
+		</div>
+	</div>
+
+</div>

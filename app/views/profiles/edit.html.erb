@@ -1,0 +1,12 @@
+<% provide(:title, 'Edit Profile') %>
+
+<% if @profile.errors.any? %>
+	<% @profile.errors.full_messages.each do |msg| %>
+	<li><%= msg %></li>
+	<% end %>
+<% end %>
+
+<h2>Edit Profile</h2>
+<p>Edit your profile below.</p>
+
+<%= render partial: 'form' %>

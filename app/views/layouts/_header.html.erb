@@ -16,7 +16,8 @@
   <div class="collapse navbar-collapse navbar-ex1-collapse">
       <ul class="nav navbar-nav navbar-right">
       <% if therapist_signed_in? %>
-			<li><%= link_to "Log out", destroy_therapist_session_path, method: :delete %></li>
+			<li><%= link_to "Create Profile", new_profile_path %></li>
+      <li><%= link_to "Log out", destroy_therapist_session_path, method: :delete %></li>
 			<% else %>
 			<li><%= link_to "Sign up", new_therapist_registration_path %></li>
       <li><%= link_to "Sign in", new_therapist_session_path %></li>
