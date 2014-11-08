@@ -67,6 +67,9 @@ GEM
     mail (2.5.4)
       mime-types (~> 1.16)
       treetop (~> 1.4.8)
+    mail_form (1.5.0)
+      actionmailer (>= 3.2, < 5)
+      activemodel (>= 3.2, < 5)
     mime-types (1.25.1)
     minitest (5.4.2)
     multi_json (1.10.1)
@@ -152,6 +155,7 @@ DEPENDENCIES
   jquery-rails
   jquery-turbolinks
   jquery-ui-rails
+  mail_form
   paperclip (~> 4.2)
   pg
   rails (= 4.1.1)

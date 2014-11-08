@@ -49,6 +49,9 @@ gem 'devise'
 # Paperclip for therapist photo file upload
 gem "paperclip", "~> 4.2"
 
+# MailForm for contacting therapist
+gem 'mail_form'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
