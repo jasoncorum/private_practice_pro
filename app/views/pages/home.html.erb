@@ -3,10 +3,8 @@
     <div id="veil">
       <div id="welcome">
         <p>I am a...</p>
-        <button id="therapist">
-	    			<%= link_to "Therapist", new_therapist_session_path %>
-	  			</button>
 
+	    	<%= link_to "Therapist", new_therapist_session_path, id: "therapist" %>
 
         <button id="patient">Patient</button>
           <div id="dialog" title="Find a Therapist">Enter your zipcode:<br>
@@ -16,17 +14,16 @@
             <%= submit_tag('Search') %>
             <% end %>
           </div>
-
-
-
       </div>
     </div>
   </div>
-  <script type="text/javascript" src="js/jquery.js"></script>
-  <script type="text/javascript" src="js/jquery-ui.min.js"></script>
-  <script type="text/javascript">
-    $( "#dialog" ).dialog({ autoOpen: false });
-    $( "#patient" ).click(function() {
-      $( "#dialog" ).dialog( "open" );
-    });
-  </script>
+</div>
+
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/jquery-ui.min.js"></script>
+<script type="text/javascript">
+  $( "#dialog" ).dialog({ autoOpen: false });
+  $( "#patient" ).click(function() {
+    $( "#dialog" ).dialog( "open" );
+  });
+</script>
