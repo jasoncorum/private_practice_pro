@@ -1,102 +1,57 @@
+<div id="wrapper">
 
-	<p>
 	<%= form_for @profile, html: { multipart: true } do |f| %>
 
-  <h3 class="heading">Account Creation</h3>
+		<%= f.label :first_name, "First Name:", :input_html => { :id => 'email' } %><br />
+		<%= f.text_field :first_name, autofocus: true %>
+		
+		<%= f.label :last_name, "Last Name:" %><br />
+		<%= f.text_field :last_name %>
 
-	<%= f.label :first_name, "First Name:", :input_html => { :id => 'email' } %><br />
-	<%= f.text_field :first_name, autofocus: true, class: "form-control" %></div>
+		<%= f.label :address_one, "Address One:" %><br />
+		<%= f.text_field :address_one %>
+
+		<%= f.label :address_two, "Address Two:" %><br />
+		<%= f.text_field :address_two %>
+
+		<%= f.label :city, "City:" %><br />
+		<%= f.text_field :city %>
+
+		<%= f.label :state, "State:" %><br />
+		<%= f.select :state, @options_for_state, autofocus: true %>
+
+		<%= f.label :zip, "Zipcode:" %><br />
+		<%= f.text_field :zip %>
+
+		<%= f.label :email, "Email:" %><br />
+		<%= f.email_field :email %>
+
+		<%= f.label :phone, "Phone Number:" %><br />
+		<%= f.text_field :phone %>
+
+</div>
+
+<div class="heading"><div id="wrapper"><h3>About You</h3></div></div>
+
+<div id="wrapper">
+
+	  <%= f.label :image, "Upload a profile photo:" %>
+	  <%= f.file_field :image %>
+
+		<%= f.label :degree, "Degree:" %><br />
+		<%= f.text_field :degree %>
+
+		<%= f.label :university, "University:" %><br />
+		<%= f.text_field :university %>
+
+		<%= f.label :therapeutic_style, "Therapeutic Style:" %><br />
+		<%= f.text_field :therapeutic_style %>
+
+		<%= f.label :years_of_practice, "Years of Practice:" %><br />
+		<%= f.text_field :years_of_practice %>
+
+	  <p><%= f.submit "Save", class: "btn btn-primary btn-lg" %></p>
 	
-	<div class="form-group">
-	<%= f.label :last_name, "Last Name:", class: "control-label" %><br />
-	<%= f.text_field :last_name, class: "form-control" %></div>
+	<% end %>
 
-	<div class="form-group">
-	<%= f.label :address_one, "Address One:", class: "control-label" %><br />
-	<%= f.text_field :address_one, class: "form-control" %></div>
-
-	<div class="form-group">
-	<%= f.label :address_two, "Address Two:", class: "control-label" %><br />
-	<%= f.text_field :address_two, class: "form-control" %></div>
-
-	<div class="form-group">
-	<%= f.label :city, "City:", class: "control-label" %><br />
-	<%= f.text_field :city, class: "form-control" %></div>
-
-	<div class="form-group">
-	<%= f.label :state, "State:", class: "control-label" %><br />
-	<%= f.select :state, @options_for_state, autofocus: true, class: "form-control" %></div>
-
-	<div class="form-group">
-	<%= f.label :zip, "Zipcode:", class: "control-label" %><br />
-	<%= f.text_field :zip, class: "form-control" %></div>
-
-	<div class="form-group">
-	<%= f.label :email, "Email:", class: "control-label" %><br />
-	<%= f.email_field :email, class: "form-control" %></div>
-
-	<div class="form-group">
-	<%= f.label :phone, "Phone Number:", class: "control-label" %><br />
-	<%= f.text_field :phone, class: "form-control" %></div>
-
-	<h3>About You</h3>
-
-	<div class="form-group">
-    <%= f.label :image, "Upload a profile photo:" %>
-    <%= f.file_field :image, class: "form-control" %>
-  </div>
-
-  <div class="form-group">
-	<%= f.label :degree, "Degree:", class: "control-label" %><br />
-	<%= f.text_field :degree, class: "form-control" %></div>
-
-	<div class="form-group">
-	<%= f.label :university, "University:", class: "control-label" %><br />
-	<%= f.text_field :university, class: "form-control" %></div>
-
-	<div class="form-group">
-	<%= f.label :therapeutic_style, "Therapeutic Style:", class: "control-label" %><br />
-	<%= f.text_field :therapeutic_style, class: "form-control" %></div>
-
-	<div class="form-group">
-	<%= f.label :years_of_practice, "Years of Practice:", class: "control-label" %><br />
-	<%= f.text_field :years_of_practice, class: "form-control" %></div>
-
-  <p><%= f.submit "Save", class: "btn btn-primary btn-lg" %></p>
-<% end %>
-
-
-      Email <input type="text" id="email" required>
-      Password <input type="text" id="password" required>
-      <h3 class="heading">Contact Information</h3>
-      First Name <input type="text" id="first_name" required>
-      Last Name <input type="text" id="last_name" required>
-      Address 1 <input type="text" id="address_one" required>
-      Address 2 <input type="text" id="address_two">
-      City <input type="text" id="city" required>
-      State <select required>
-        <option value="DC">DC</option>
-        <option value="MD">MD</option>
-        <option value="VA">VA</option>
-        </select>
-      Zip Code <input type="text" id="zip" required>
-      Phone Number <input type="text" id="phone" required>
-  
-      <h3 class="heading">About You</h3>
-      Upload a profile photo <input type="file" id="pic" accept=" image/*">
-    <input type="submit">
-      Degree <input type="text" id="degree" required>
-      University <input type="text" id="university" required>
-      Therapeutic Style <input type="text" id="tstyle" required>
-      Years of Practice <input type="text" id="years">
-      Accepting new patients?<br> Yes <input class="radio" type="radio"  name="new" value="yes" required>
-      No <input class="radio" type="radio" name="new" value="no"  required>
-      <input type="submit" value="Submit">
-    </form>
-  </div>
-</body>
-</html>
-
-
-
-
+</div>

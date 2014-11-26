@@ -1,16 +1,17 @@
 <% provide(:title, 'Create Profile') %>
 
+<div class="heading"><div id="wrapper"><h1>Therapist Profile Form</h1></div></div>
+
 <div id="wrapper">
 
-<% if @profile.errors.any? %>
-	<% @profile.errors.full_messages.each do |msg| %>
-	<li><%= msg %></li>
+	<% if @profile.errors.any? %>
+		<% @profile.errors.full_messages.each do |msg| %>
+		<li><%= msg %></li>
+		<% end %>
 	<% end %>
-<% end %>
 
-<h1>Therapist Profile Form</h1>
-<p>Fill out the form below to register with us.</p>
-
-<%= render partial: 'form' %>
+	<p>Fill out the form below to register with us.</p>
 
 </div>
+
+<%= render partial: 'form' %>
